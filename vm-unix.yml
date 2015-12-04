@@ -1,0 +1,24 @@
+# Note: None of these examples set subscription_id or management_cert_path
+# It is assumed that their matching environment variables are set.
+
+# Provision virtual machine example
+
+
+# Terminate virtual machine example
+
+#Ubuntu-Tomcat
+- hosts: all
+  connection: local
+  tasks:
+   - local_action:
+      module: azure
+      name: "srv-web01"
+      hostname: "srv-web01"
+      os_type: linux
+      subscription_id: "f8fcb571-4176-419e-9bbc-4dacf95da809"
+      role_size: A2
+      image: 'b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu_DAILY_BUILD-trusty-14_04_3-LTS-amd64-server-20151116-en-us-30GB'
+      location: 'East US'
+      password: "Admin123"
+      storage_account: kimvm
+      user: linuxadmin
