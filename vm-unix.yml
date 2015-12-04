@@ -7,8 +7,7 @@
 # Terminate virtual machine example
 
 #Ubuntu-Tomcat
-- hosts: all
-  connection: local
+- connection: local
   tasks:
    - local_action:
       module: azure
