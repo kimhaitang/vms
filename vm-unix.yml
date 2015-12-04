@@ -10,8 +10,10 @@
 
 
 
-
-- local_action:
+- hosts: all
+  connection: local
+  tasks:
+   - local_action:
      module: azure
      name: "srv-web01"
      hostname: "srv-web01"
